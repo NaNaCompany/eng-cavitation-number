@@ -1,0 +1,49 @@
+{
+  "id": "E134",
+  "value": 1.9832899218593467,
+  "reference70": "1.983289921859346824283710679222600681226207172911240232418353035463835",
+  "method": "Independent Python Decimal with 80-digit working precision, reported to 70 significant digits; direct physical formula. E140 uses 260-step dimensional-wavenumber bisection, independent of the runtime dimensionless solver.",
+  "cases": [
+    {
+      "name": "reference at saturation",
+      "values": {
+        "p": 2339
+      },
+      "expected": 0.0,
+      "reference70": "0e+1"
+    },
+    {
+      "name": "twice speed quarters index",
+      "values": {
+        "v": 20
+      },
+      "expected": 0.4958224804648367,
+      "reference70": "0.4958224804648367060709276698056501703065517932278100581045882588659587"
+    },
+    {
+      "name": "analytic unity",
+      "values": {
+        "p": 200000,
+        "pv": 0,
+        "rho": 1000,
+        "v": 20
+      },
+      "expected": 1.0,
+      "reference70": "1"
+    },
+    {
+      "name": "below vapor pressure rejected",
+      "values": {
+        "p": 1000
+      },
+      "throws": true
+    },
+    {
+      "name": "zero reference speed rejected",
+      "values": {
+        "v": 0
+      },
+      "throws": true
+    }
+  ]
+}
